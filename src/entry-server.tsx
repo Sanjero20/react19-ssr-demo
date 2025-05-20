@@ -12,5 +12,8 @@ export function render(url: string) {
 			</StaticRouter>
 		</StrictMode>
 	);
+
+	console.log(html);
+
 	return { html };
 }

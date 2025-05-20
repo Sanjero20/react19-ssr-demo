@@ -1,9 +1,8 @@
 import "./App.css";
-import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router";
 
 import BaseLayout from "./components/layout/base-layout";
-import { HomePage, SubscriptionsPage } from "./pages";
+import { HomePage, SubscriptionsPage, NotFoundPage } from "./pages";
 
 function App() {
 	return (
@@ -12,6 +11,7 @@ function App() {
 				<Route index element={<HomePage />} />
 				<Route path="/subscriptions" element={<SubscriptionsPage />} />
 			</Route>
+			<Route path="*" element={<NotFoundPage />} />
 		</Routes>
 	);
 }
